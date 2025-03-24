@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gen AI based Email Classification and OCR</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <script>
+        function startProcess() {
+            document.getElementById('spinner').style.display = 'block';
+            document.getElementById('output').innerHTML = '';
+
+            fetch('/start-process', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Data received:', data);
+                    displayDataInTable(data);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('output').innerHTML = '<p class="error">Error: Unable to start process.</p>';
+                })
+                .finally(() => {
+                    document.getElementById('spinner').style.display = 'none';
+                });
+        }
+
+        function displayDataInTable(data) {
+            const output = document.getElementById('output');
+
+            if (!Array.isArray(data) || data.length === 0) {
+                output.innerHTML = '<p>No data available.</p>';
+                return;
+            }
+
+            const keys = getAllKeys(data);
+
+            let tableHtml = `
+                <table>
+                    <thead>
+                        <tr>
+                            ${keys.map(key => `<th>${key}</th>`).join('')}
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            data.forEach(item => {
+                tableHtml += '<tr>';
+                keys.forEach(key => {
+                    let value = item[key] !== undefined ? item[key] : 'N/A';
+
+                    // Handle nested data formatting
+                    value = formatNestedData(value);
+
+                    tableHtml += `<td>${value || 'N/A'}</td>`;
+                });
+                tableHtml += '</tr>';
+            });
+
+            tableHtml += `
+                    </tbody>
+                </table>
+            `;
+
+            output.innerHTML = tableHtml;
+        }
+
+        function getAllKeys(data) {
+            const keys = new Set();
+            data.forEach(item => {
+                Object.keys(item).forEach(key => keys.add(key));
+            });
+            return Array.from(keys);
+        }
+
+        function formatNestedData(value) {
+            if (typeof value === 'string' && (value.trim().startsWith('{') || value.trim().startsWith('['))) {
+                value = safeParseJSON(value);
+            }
+
+            if (isObject(value)) {
+                return formatObjectToList(value);
+            }
+
+            if (Array.isArray(value)) {
+                return `<ul>${value.map(v => `<li>${v}</li>`).join('')}</ul>`;
+            }
+
+            return value || 'N/A';
+        }
+
+        function safeParseJSON(value) {
+            try {
+                return JSON.parse(value.replace(/'/g, '"'));
+            } catch (e) {
+                try {
+                    return eval(`(${value})`);
+                } catch (e2) {
+                    console.error('Error parsing JSON:', value);
+                    return value;
+                }
+            }
+        }
+
+        function formatObjectToList(obj) {
+            let html = '<ul>';
+            for (let key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    let value = obj[key] !== null && obj[key] !== undefined ? obj[key] : 'N/A';
+                    html += `<li><strong>${key}:</strong> ${value}</li>`;
+                }
+            }
+            html += '</ul>';
+            return html;
+        }
+
+        function isObject(value) {
+            return value && typeof value === 'object' && !Array.isArray(value);
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Banner Section -->
+    <div class="banner">
+        Gen AI based Email Classification and OCR
+    </div>
+
+    <div class="container">
+        <h1>Run Email Classification and OCR</h1>
+        <button onclick="startProcess()">Run Script</button>
+        <div id="spinner" class="spinner"></div>
+        <div id="output"></div>
+    </div>
+</body>
+
+</html>
