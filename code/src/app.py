@@ -1,9 +1,8 @@
-# app.py
 from flask import Flask, render_template, request, jsonify
 import subprocess
 import pandas as pd
-import time
 import os
+import numpy as np
 
 app = Flask(__name__)
 
@@ -19,17 +18,36 @@ def start_process():
     # Wait for the process to complete
     process.wait()
     
-    # Path to the output CSV file
-    output_file = 'app/DataFrames/output.csv'
+    # Paths to the output CSV files
+    email_processing_file = 'app/DataFrames/output.csv'  # Email processing data
+    duplicate_email_file = 'app/DataFrames/duplicate.csv'  # Duplicate email data
     
-    # Check if the file exists before trying to read it
-    if os.path.exists(output_file):
-        # Read the DataFrame
-        df = pd.read_csv(output_file)
-        # Return the DataFrame as JSON
-        return df.to_json(orient='records')
+    data = {}
+
+    # Check if the email processing file exists
+    if os.path.exists(email_processing_file):
+        df1 = pd.read_csv(email_processing_file)
+        
+        # Replace NaN values with empty strings or "N/A"
+        df1 = df1.replace({np.nan: 'N/A'})
+        
+        data['email_processing_data'] = df1.to_dict(orient='records')
     else:
-        return 'Error: No data found or process failed.', 500
+        data['email_processing_data'] = 'Error: Email processing data not found.'
+
+    # Check if the duplicate email file exists
+    if os.path.exists(duplicate_email_file):
+        df2 = pd.read_csv(duplicate_email_file)
+        
+        # Replace NaN values with empty strings or "N/A"
+        df2 = df2.replace({np.nan: 'N/A'})
+        
+        data['duplicate_email_data'] = df2.to_dict(orient='records')
+    else:
+        data['duplicate_email_data'] = 'Error: Duplicate email data not found.'
+    
+    # Return the combined data as JSON
+    return jsonify(data)
 
 if __name__ == '__main__':
     app.run(debug=True)

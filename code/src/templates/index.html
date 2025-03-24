@@ -9,34 +9,41 @@
     <script>
         function startProcess() {
             document.getElementById('spinner').style.display = 'block';
-            document.getElementById('output').innerHTML = '';
+            document.getElementById('output-processing').innerHTML = '';
+            document.getElementById('output-duplicate').innerHTML = '';
 
             fetch('/start-process', { method: 'POST' })
                 .then(response => response.json())
                 .then(data => {
                     console.log('Data received:', data);
-                    displayDataInTable(data);
+                    if (data.email_processing_data) {
+                        displayDataInTable(data.email_processing_data, 'output-processing', 'Email Processing Data');
+                    }
+                    if (data.duplicate_email_data) {
+                        displayDataInTable(data.duplicate_email_data, 'output-duplicate', 'Duplicate Email Data');
+                    }
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    document.getElementById('output').innerHTML = '<p class="error">Error: Unable to start process.</p>';
+                    document.getElementById('output-processing').innerHTML = '<p class="error">Error: Unable to start process.</p>';
                 })
                 .finally(() => {
                     document.getElementById('spinner').style.display = 'none';
                 });
         }
 
-        function displayDataInTable(data) {
-            const output = document.getElementById('output');
+        function displayDataInTable(data, elementId, title) {
+            const output = document.getElementById(elementId);
 
             if (!Array.isArray(data) || data.length === 0) {
-                output.innerHTML = '<p>No data available.</p>';
+                output.innerHTML = `<p>No data available for ${title}.</p>`;
                 return;
             }
 
             const keys = getAllKeys(data);
 
             let tableHtml = `
+                <h2>${title}</h2>
                 <table>
                     <thead>
                         <tr>
@@ -130,9 +137,14 @@
 
     <div class="container">
         <h1>Run Email Classification and OCR</h1>
-        <button onclick="startProcess()">Run Script</button>
+        <button onclick="startProcess()">Start</button>
         <div id="spinner" class="spinner"></div>
-        <div id="output"></div>
+
+        <!-- Section for Email Processing Data -->
+        <div id="output-processing"></div>
+
+        <!-- Section for Duplicate Email Data -->
+        <div id="output-duplicate"></div>
     </div>
 </body>
 

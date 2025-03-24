@@ -1,0 +1,10 @@
+﻿Group ID,Group Hash,Filename,Subject,Date,Type,Latest
+1,246676be98657dcc62ded282683dc5d0,email1.eml,"Wire Transfer Confirmation - USD 50,000 to Account #567890",1970-01-01,Original,✅
+1,246676be98657dcc62ded282683dc5d0,email1_forward.eml,"Wire Transfer Confirmation - USD 50,000 to Account #567890",1970-01-01,Original,
+1,246676be98657dcc62ded282683dc5d0,email1_reply.eml,"Wire Transfer Confirmation - USD 50,000 to Account #567890",1970-01-01,Original,
+2,a044b6318b1156a259da5e76d45c387a,email2.eml,"Confirmation of Transfer Receipt - USD 50,000",1970-01-01,Original,✅
+2,a044b6318b1156a259da5e76d45c387a,email2_reply.eml,"Confirmation of Transfer Receipt - USD 50,000",1970-01-01,Original,
+3,306799d7206b4d6bad16697fed24ac0d,email3.eml,"Internal Review - Wire Transfer USD 50,000",1970-01-01,Original,✅
+3,306799d7206b4d6bad16697fed24ac0d,email3_reply.eml,"Internal Review - Wire Transfer USD 50,000",1970-01-01,Original,
+4,c6d5d3e70ea6d9089af4feebf20e8533,email4.eml,"Compliance Review - Wire Transfer USD 50,000",1970-01-01,Original,✅
+4,c6d5d3e70ea6d9089af4feebf20e8533,email4_forward.eml,"Compliance Review - Wire Transfer USD 50,000",1970-01-01,Original,

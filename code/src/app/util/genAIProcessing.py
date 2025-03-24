@@ -3,6 +3,7 @@ import pandas as pd
 import google.generativeai as genai
 import re
 from concurrent.futures import ThreadPoolExecutor
+import time
 
 
 def prepareEmailData(dataFrameFolderName, emailHeaderDataSet, emailAttachmentDataSet, apiKey, GenAIModelName):
