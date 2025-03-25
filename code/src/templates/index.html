@@ -7,6 +7,12 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 
     <script>
+        // Predefined set of expected column names for email processing data
+        const emailProcessingColumns = ['Id', 'EmailFileName', 'Sender', 'Subject','Summary','Primary','AlternativeMatch'];  // Adjust according to your data structure
+
+        // Predefined set of expected column names for duplicate email data
+        const duplicateEmailColumns = ['Group ID', 'Filename', 'Subject', 'Type', 'Latest'];  // Adjust according to your data structure
+
         function startProcess() {
             document.getElementById('spinner').style.display = 'block';
             document.getElementById('output-processing').innerHTML = '';
@@ -17,10 +23,10 @@
                 .then(data => {
                     console.log('Data received:', data);
                     if (data.email_processing_data) {
-                        displayDataInTable(data.email_processing_data, 'output-processing', 'Email Processing Data');
+                        displayDataInTable(data.email_processing_data, 'output-processing', 'Email Processing Data', emailProcessingColumns);
                     }
                     if (data.duplicate_email_data) {
-                        displayDataInTable(data.duplicate_email_data, 'output-duplicate', 'Duplicate Email Data');
+                        displayDataInTable(data.duplicate_email_data, 'output-duplicate', 'Duplicate Email Data', duplicateEmailColumns);
                     }
                 })
                 .catch(error => {
@@ -32,7 +38,7 @@
                 });
         }
 
-        function displayDataInTable(data, elementId, title) {
+        function displayDataInTable(data, elementId, title, columns) {
             const output = document.getElementById(elementId);
 
             if (!Array.isArray(data) || data.length === 0) {
@@ -40,14 +46,12 @@
                 return;
             }
 
-            const keys = getAllKeys(data);
-
             let tableHtml = `
                 <h2>${title}</h2>
                 <table>
                     <thead>
                         <tr>
-                            ${keys.map(key => `<th>${key}</th>`).join('')}
+                            ${columns.map(key => `<th>${key}</th>`).join('')}
                         </tr>
                     </thead>
                     <tbody>
@@ -55,13 +59,10 @@
 
             data.forEach(item => {
                 tableHtml += '<tr>';
-                keys.forEach(key => {
-                    let value = item[key] !== undefined ? item[key] : 'N/A';
-
-                    // Handle nested data formatting
-                    value = formatNestedData(value);
-
-                    tableHtml += `<td>${value || 'N/A'}</td>`;
+                columns.forEach(key => {
+                    let value = item[key] !== undefined ? item[key] : 'N/A';  // Default to 'N/A' if the key is missing
+                    value = formatNestedData(value);  // Format nested data if necessary
+                    tableHtml += `<td>${value}</td>`;
                 });
                 tableHtml += '</tr>';
             });
@@ -72,14 +73,6 @@
             `;
 
             output.innerHTML = tableHtml;
-        }
-
-        function getAllKeys(data) {
-            const keys = new Set();
-            data.forEach(item => {
-                Object.keys(item).forEach(key => keys.add(key));
-            });
-            return Array.from(keys);
         }
 
         function formatNestedData(value) {
