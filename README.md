@@ -6,9 +6,9 @@
 - [Inspiration](#💡-inspiration)
 - [What It Does](#⚙️-what-it-does)
 - [How We Built It](#🛠️-how-we-built-it)
-- [Challenges We Faced](#🚧-challenges-we-faced)
 - [How to Run](#🏃-how-to-run)
 - [Project Structure](#📂-project-structure)
+- [Challenges We Faced](#🚧-challenges-we-faced)
 - [Tech Stack](#🏗️-tech-stack)
 - [Team](#👥-team)
 
@@ -80,34 +80,6 @@ To **automate and optimize** this workflow, we developed an **AI-powered system*
 
 ---
 
-## 🚧 Challenges We Faced
-
-### **OCR Accuracy**
-- **Challenge:** Extracting data from scanned or image-based PDFs often results in errors due to noise, low quality, or irregular fonts.
-- **Solution:** We employed **Tesseract OCR** with pre-processing steps like image resizing and noise reduction to improve extraction accuracy.
-
-### **Real-Time Processing**
-- **Challenge:** Ensuring that emails and attachments are processed in real-time without significant delays, especially when handling large volumes of incoming data.
-- **Solution:** Optimized backend processing by breaking down tasks into smaller, manageable chunks and using asynchronous processing methods to maintain performance under heavy load.
-
-### **Handling Diverse Attachment Types**
-- **Challenge:** Attachments came in many formats (e.g., PDFs, images, Word docs), each requiring different processing techniques for data extraction.
-- **Solution:** Integrated multiple libraries like **PDFPlumber** for PDFs and **Tesseract** for OCR to ensure seamless extraction across formats.
-
-### **Security Concerns**
-- **Challenge:** Safeguarding sensitive email content during processing and storage, particularly when dealing with personal or confidential information.
-- **Solution:** We implemented **data encryption**, used **secure servers**, and followed best practices to ensure that no sensitive data was exposed.
-
-### **Duplicate Detection**
-- **Challenge:** Identifying and removing duplicate emails and attachments, especially when emails were forwarded multiple times or included attachments in varying formats.
-- **Solution:** Developed an algorithm to detect similarities in email content, subject, and attachments, enabling the system to flag duplicates effectively.
-
-### **Ensuring Scalability**
-- **Challenge:** As the system scales to handle larger volumes of emails, performance could degrade if not properly managed.
-- **Solution:** We utilized **scalable cloud infrastructure** and optimized the processing pipelines to ensure smooth handling of increasing volumes of data.
-
----
-
 ## 🏃 How to Run
 
 1. **Clone the repository**
@@ -169,6 +141,22 @@ To **automate and optimize** this workflow, we developed an **AI-powered system*
 ├── LICENSE  
 ├── README.md  
 ```
+
+---
+
+## 🚧 Challenges We Faced
+
+### **OCR Accuracy**
+- **Challenge:** Extracting data from scanned or image-based PDFs often results in errors due to noise, low quality, or irregular fonts.
+- **Solution:** We employed **Tesseract OCR** with pre-processing steps like image resizing and noise reduction to improve extraction accuracy.
+
+### **Real-Time Processing**
+- **Challenge:** Ensuring that emails and attachments are processed in real-time without significant delays, especially when handling large volumes of incoming data.
+- **Solution:** Optimized backend processing by breaking down tasks into smaller, manageable chunks and using asynchronous processing methods to maintain performance under heavy load.
+
+### **Handling Diverse Attachment Types**
+- **Challenge:** Attachments came in many formats (e.g., PDFs, images, Word docs), each requiring different processing techniques for data extraction.
+- **Solution:** Integrated multiple libraries like **PDFPlumber** for PDFs and **Tesseract** for OCR to ensure seamless extraction across formats.
 
 ---
 
