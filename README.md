@@ -204,7 +204,7 @@ To **automate and optimize** this workflow, we developed an **AI-powered system*
 ---
 
 ## Design 
-<img src="./artifacts/arch/archArch.jpg" width="300" />
+<img src="./artifacts/arch/Arch.jpg" width="300" />
 
 
 ## 👥 Team
