@@ -1,0 +1,115 @@
+Id,Sender,Body,Subject,Attachments,EmailFileName
+1,,"Dear Client,
+
+We have successfully processed your outbound wire transfer of **USD 50,000** to the following account:
+
+- Beneficiary: ABC Corp
+- Account Number: 567890
+- Bank: XYZ International Bank
+- SWIFT Code: XYZB1234567
+- Transfer Date: March 20, 2025
+
+Please allow 2-3 business days for the funds to reflect in the beneficiary’s account.
+
+Best regards,
+Accounts Team
+","Wire Transfer Confirmation - USD 50,000 to Account #567890",,email1.eml
+2,,"Hi Compliance Team,
+
+Please review the transfer details below and confirm the accuracy.
+Forwarding the original wire transfer confirmation for your reference.
+
+----- Forwarded message -----
+From: Accounts Team
+Subject: Wire Transfer Confirmation - USD 50,000 to Account #567890
+Date: March 20, 2025
+
+Dear Client,
+
+We have successfully processed your outbound wire transfer of **USD 50,000** to the following account:
+
+- Beneficiary: ABC Corp
+- Account Number: 567890
+- Bank: XYZ International Bank
+- SWIFT Code: XYZB1234567
+- Transfer Date: March 20, 2025
+
+Best regards,
+Accounts Team
+","Fwd: Wire Transfer Confirmation - USD 50,000 to Account #567890",,email1_forward.eml
+3,,"Hi Accounts Team,
+
+We have received the wire transfer of **USD 50,000** in our account successfully.
+
+Transaction Reference: ABC5678XYZ
+Transfer Date: March 21, 2025
+
+Thank you for the prompt service.
+
+Best regards,
+John Smith
+Finance Manager, ABC Corp
+","Re: Wire Transfer Confirmation - USD 50,000 to Account #567890",,email1_reply.eml
+4,,"Dear Accounts Team,
+
+We have confirmed receipt of the wire transfer of **USD 50,000**. The amount was credited on March 21, 2025.
+
+Transaction Ref: ABC5678XYZ
+
+Thank you for your service.
+
+Best regards,
+John Smith
+Finance Manager, ABC Corp
+","Confirmation of Transfer Receipt - USD 50,000",,email2.eml
+5,,"Hi John,
+
+We’re glad the funds have been credited successfully.  
+Would you be able to share the transaction receipt for our records?  
+
+Best regards,  
+Accounts Team
+","Re: Confirmation of Transfer Receipt - USD 50,000",,email2_reply.eml
+6,,"Hi Compliance Team,
+
+Please review the wire transfer to ABC Corp and confirm if all details align with compliance requirements.  
+
+Transaction Ref: ABC5678XYZ  
+
+Best regards,  
+Accounts Team
+","Internal Review - Wire Transfer USD 50,000",,email3.eml
+7,,"Hi Accounts Team,
+
+The wire transfer details have been reviewed, and everything appears to be accurate.  
+No discrepancies were found.
+
+Best regards,  
+Compliance Team
+","Re: Internal Review - Wire Transfer USD 50,000",,email3_reply.eml
+8,,"Hi Accounts Team,
+
+The compliance review for the wire transfer of USD 50,000 has been successfully completed.  
+
+No further action required.
+
+Best regards,  
+Compliance Team
+","Compliance Review - Wire Transfer USD 50,000",,email4.eml
+9,,"Hi Finance Team,  
+
+The compliance review is complete. No discrepancies found in the wire transfer.  
+Forwarding the compliance confirmation for your reference.
+
+----- Forwarded message -----
+From: Compliance Team
+Subject: Compliance Review - Wire Transfer USD 50,000
+Date: March 22, 2025
+
+Hi Accounts Team,
+
+The compliance review for the wire transfer of USD 50,000 has been successfully completed.  
+
+Best regards,  
+Compliance Team
+","Fwd: Compliance Review - Wire Transfer USD 50,000",,email4_forward.eml

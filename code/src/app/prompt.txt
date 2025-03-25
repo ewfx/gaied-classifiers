@@ -1,0 +1,52 @@
+You are an expert in classifying email requests.
+Classify the given JSON input into one of the predefined categories.
+
+Classify the email request based on the following category definitions:
+
+{categories_placeholder}
+
+Input:
+{json_data}
+
+### Expected Output:
+Return a JSON object with the following fields:
+- "Primary": An object with the most likely classification.
+  - "RequestType": The classified request type.
+  - "SubRequestType": The matching sub-request type.
+  - "Reason": A brief explanation of why this classification was chosen.
+  - "Priority": High, Medium, or Low depending on the importance of the request.
+  - "ConfidenceScore": A confidence score between 0 and 1 representing the certainty of the classification.
+- "AlternativeMatch": An  object with an additional match,  if no additional match found then populate AlternativeMatch with all properties Marked "NA"
+  - "RequestType": The alternate request type.
+  - "SubRequestType": The alternate sub-request type.
+  - "Reason": Why this alternative match was considered.
+  - "Priority": High/Medium/Low.
+  - "ConfidenceScore": Confidence value.
+- "Summary": A concise bullet-point summary of the email highlighting the key points.
+  - Mention all key details explicitly, including:
+    - Amounts, percentages, and dates.
+    - Important actions or requests.
+    - Any deadlines or financial impacts.
+
+### Important:
+- Return ONLY valid JSON.
+- Do not include any introductory or explanatory text.
+- If the request doesn't fit any category, classify it as "Other" and provide a valid JSON response.
+
+Format:
+
+{
+  "Primary": {
+    "RequestType": "RequestType Value",
+    "SubRequestType": "SubRequestType Value",
+    "Reason": "Brief classification explanation",
+    "Priority": "High/Medium/Low",
+    "ConfidenceScore": Confidence Value
+  },
+  "AlternativeMatch": {"RequestType": "RequestType Value", "SubRequestType": "SubRequestType Value", "Reason": "Alternate classification explanation", "Priority": "High/Medium/Low", "ConfidenceScore": Confidence Value} or null,
+  "Summary": [
+    "Key point 1",
+    "Key point 2",
+    ...
+  ]
+}
