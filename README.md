@@ -137,7 +137,10 @@ Follow these steps to set up and run the project locally:
 - **OCR:** Tesseract (For Optical Character Recognition to extract text from scanned PDFs and images), PDFPlumber (For reading and extracting structured text from PDFs)  
 
 ## 👥 Team  
-- **Your Name** - [GitHub](#) | [LinkedIn](#)  
-- **Teammate 2** - [GitHub](#) | [LinkedIn](#)  
+- **Varun Bansal** (Captain) - [GitHub](https://github.com/VarunBansal126) | [LinkedIn](https://www.linkedin.com/in/varun-bansal-58345a12b/)  
+- **Dipak Nayak**  
+- **Kazhian Muthusami**  
+- **Swarnlata Singh**  
+- **Manish Pandey**
 
 ---
