@@ -37,16 +37,16 @@ You can watch the demo video here:
 
 🖼️ Screenshots:
 
-![Landing Page](artifacts/screenshots/LandingPage.PNG)  
+<img src="./artifacts/screenshots/LandingPage.PNG" width="500" />
 *Landing Page - User interface to interact with the system.*
 
-![Processing](artifacts/screenshots/Processing.PNG)  
+<img src="./artifacts/screenshots/Processing.PNG" width="500" />
 *Real-time processing and extraction from attachments.*
 
-![Email Classification](artifacts/screenshots/EmailClassification.PNG)  
+<img src="./artifacts/screenshots/EmailClassification.PNG" width="500" />  
 *Classifying emails into predefined categories.*
 
-![Duplicate Detection](artifacts/screenshots/DuplicateDetection.PNG)  
+<img src="./artifacts/screenshots/DuplicateDetection.PNG" width="500" />
 *Identifying and eliminating duplicate emails.*
 
 ---
