@@ -26,17 +26,21 @@ This solution automates tedious email processing tasks, reduces manual effort, a
 ![Landing Page](artifacts/screenshots/LandingPage.PNG)  
 *Landing Page - User interface to interact with the system.*
 
+![Processing](artifacts/screenshots/Processing.PNG)  
+*Real-time processing and extraction from attachments.*
+
 ![Email Classification](artifacts/screenshots/EmailClassification.PNG)  
 *Classifying emails into predefined categories.*
 
 ![Duplicate Detection](artifacts/screenshots/DuplicateDetection.PNG)  
 *Identifying and eliminating duplicate emails.*
 
-![Processing](artifacts/screenshots/Processing.PNG)  
-*Real-time processing and extraction from attachments.*
-
 ## 💡 Inspiration  
-Managing large volumes of emails manually can be overwhelming, especially when they contain important attachments such as invoices, reports, or contracts. Inspired by the need to streamline this process, we aimed to build an AI-powered solution that automates email classification and data extraction, saving time and minimizing human errors.
+In the current process, a team receives a significant volume of **emails**, many of which contain **attachments** and long email chains. Each email requires **manual investigation**, with the team—referred to as *Gatekeepers*—spending substantial time reading the emails, analyzing the content of **attachments**, identifying the **intent** behind each message, and classifying the **request type** and **sub-request type**. Additionally, **key attributes** must be extracted to raise further actions and forward the email to the appropriate teams for resolution.  
+
+This **manual process** is not only **time-consuming** but also **error-prone**, **inefficient**, and burdensome. The sheer volume of emails leads to **delays**, and the complexity of handling attachments and varying email formats increases the likelihood of **mistakes** or **missed information**. The repetitive nature of this work is mentally exhausting and can impact team **productivity** and **decision-making**.
+
+Seeing the opportunity for improvement, we were inspired to create an **AI-powered solution** that could **automate** these time-consuming tasks. By leveraging **machine learning** and **natural language processing (NLP)** techniques, we envisioned a system capable of **classifying emails**, extracting **key data** from attachments, **detecting duplicates**, and generating **summaries**—all in **real time**. This solution aims to reduce the **manual effort**, improve **efficiency**, and enhance **accuracy**, allowing the team to focus on more critical tasks and making the entire email management process **faster**, more **reliable**, and **scalable**.
 
 ## ⚙️ What It Does  
 ### Key Features:  
