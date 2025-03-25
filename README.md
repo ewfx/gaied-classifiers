@@ -24,7 +24,14 @@ This solution automates tedious email processing tasks, reduces manual effort, a
 
 ## 🎥 Demo
 
-📹 [Video Demo](https://github.com/ewfx/gaied-classifiers/tree/main/artifacts/demo/Demo_With_Text.mp4) 
+Additionally, you can download the detailed presentation here:
+
+[Download PPT](artifacts/DetailPresentation.pptx)
+
+You can watch the demo video here:
+
+[Watch Demo Video](artifacts/demo/Demo_With_Text.mp4)
+
 
 
 
@@ -195,6 +202,10 @@ To **automate and optimize** this workflow, we developed an **AI-powered system*
 - **AI Model:** Google Gemini (Generative AI model for classifying emails, summarizing content, and extracting key insights)  
 - **OCR:** Tesseract (For Optical Character Recognition to extract text from scanned PDFs and images), PDFPlumber (For reading and extracting structured text from PDFs)  
 ---
+
+## Design 
+<img src="./artifacts\archArch.jpg" width="300" />
+
 
 ## 👥 Team
 
