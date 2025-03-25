@@ -98,9 +98,8 @@ To **automate and optimize** this workflow, we developed an **AI-powered system*
 
 4. **Ensure Emails are in the Correct Folder**
    - Make sure all emails that need to be processed are placed inside the folder:  
-     ```sh
-     app/Emails
-     ```
+       **app/Emails**
+     
 
 5. **Run the Application**
    ```sh
