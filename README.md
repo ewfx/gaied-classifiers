@@ -161,20 +161,29 @@ To **automate and optimize** this workflow, we developed an **AI-powered system*
 
 ## 🚧 Challenges We Faced
 
-During the development of this project, we encountered several technical challenges that required innovative solutions. Below are some of the key challenges and how we addressed them:
+### **OCR Accuracy**
+- **Challenge:** Extracting data from scanned or image-based PDFs often results in errors due to noise, low quality, or irregular fonts.
+- **Solution:** We employed **Tesseract OCR** with pre-processing steps like image resizing and noise reduction to improve extraction accuracy.
 
-### **1. OCR Accuracy**
-- **Challenge:** Extracting data from scanned or image-based PDFs proved difficult due to the inherent issues of noise, low image quality, and irregular fonts, which often resulted in inaccurate text recognition.
-- **Solution:** To overcome this, we utilized **Tesseract OCR** along with various pre-processing techniques, including image resizing, contrast enhancement, and noise reduction. These steps significantly improved the accuracy of the data extraction, ensuring more reliable results from scanned documents.
+### **Real-Time Processing**
+- **Challenge:** Ensuring that emails and attachments are processed in real-time without significant delays, especially when handling large volumes of incoming data.
+- **Solution:** Optimized backend processing by breaking down tasks into smaller, manageable chunks and using asynchronous processing methods to maintain performance under heavy load.
 
-### **2. Real-Time Processing**
-- **Challenge:** Processing emails and attachments in real-time posed a significant challenge, especially when dealing with a large volume of incoming data. The system needed to handle high throughput without introducing delays in processing.
-- **Solution:** To ensure seamless real-time processing, we optimized the backend by breaking down tasks into smaller, more manageable chunks. Additionally, we leveraged asynchronous processing methods, allowing the system to maintain performance even under heavy load, thus ensuring smooth and efficient data handling.
+### **Handling Diverse Attachment Types**
+- **Challenge:** Attachments came in many formats (e.g., PDFs, images, Word docs), each requiring different processing techniques for data extraction.
+- **Solution:** Integrated multiple libraries like **PDFPlumber** for PDFs and **Tesseract** for OCR to ensure seamless extraction across formats.
 
-### **3. Handling Diverse Attachment Types**
-- **Challenge:** Attachments in emails came in various formats (such as PDFs, Word documents, images, and spreadsheets), each requiring distinct processing techniques for accurate data extraction. This diversity increased the complexity of the system.
-- **Solution:** To handle this, we integrated multiple specialized libraries. **PDFPlumber** was used for structured PDF extraction, while **Tesseract OCR** was implemented to process scanned PDFs and image-based attachments. This multi-library approach enabled us to extract data across diverse formats efficiently, ensuring a high level of accuracy and consistency.
+### **Security Concerns**
+- **Challenge:** Safeguarding sensitive email content during processing and storage, particularly when dealing with personal or confidential information.
+- **Solution:** We implemented **data encryption**, used **secure servers**, and followed best practices to ensure that no sensitive data was exposed.
 
+### **Duplicate Detection**
+- **Challenge:** Identifying and removing duplicate emails and attachments, especially when emails were forwarded multiple times or included attachments in varying formats.
+- **Solution:** Developed an algorithm to detect similarities in email content, subject, and attachments, enabling the system to flag duplicates effectively.
+
+### **Ensuring Scalability**
+- **Challenge:** As the system scales to handle larger volumes of emails, performance could degrade if not properly managed.
+- **Solution:** We utilized **scalable cloud infrastructure** and optimized the processing pipelines to ensure smooth handling of increasing volumes of data.
 
 ---
 
