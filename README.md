@@ -50,12 +50,20 @@ Seeing the opportunity for improvement, we were inspired to create an **AI-power
 4. 🎯 **Confidence Score & Priority Assignment:** Each classified email is assigned a confidence score and priority level, ensuring critical emails receive immediate attention.  
 5. 📝 **Summary Generation:** Generates concise summaries of email content and extracted data, enabling quick decision-making.  
 
-## 🛠️ How We Built It  
-- **AI Model:** Fine-tuned a large language model (LLM) for email classification.  
-- **OCR Engine:** Integrated Tesseract OCR for accurate text extraction.  
-- **Backend:** Developed using Flask/FastAPI for seamless API integration.  
-- **Frontend:** Built a user-friendly interface using React for email visualization.  
-- **Email Parsing:** Utilized IMAP/SMTP protocols to retrieve and process emails.  
+## How We Build It
+
+### Technologies, Frameworks, and Tools
+
+1. **Generative AI Model**:
+   - **Google Gemini**: The core Generative AI model used for text classification and summarization tasks. It utilizes advanced transformer architecture to understand and generate natural language.
+
+2. **Python Libraries**:
+   - **Tesseract**: An OCR tool used for extracting text from scanned or image-based PDFs.
+   - **PDFPlumber**: A library used to read and extract text from PDFs while preserving the document’s structure and layout.
+   - **Pandas**: A powerful data manipulation library used for managing and processing the data.
+
+3. **Web Framework**:
+   - **Flask**: A lightweight Python framework used to build both the user interface (UI) and the API, enabling easy communication with the **Google Gemini** model for classification and summarization.  
 
 ## 🚧 Challenges We Faced  
 - 🔥 **Model Tuning:** Fine-tuning the AI model for high accuracy in classifying diverse email content.  
