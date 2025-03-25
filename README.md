@@ -131,15 +131,30 @@ To **automate and optimize** this workflow, we developed an **AI-powered system*
 ├── 📂 code  
 │   ├── 📂 src  
 │   │   ├── 📂 app  
-│   │   │   ├── categories.xlsx      # Defined Request Types  
+│   │   │   ├── categories.xlsx      # Request Types and Sub Types  
 │   │   │   ├── main.py              # Main logic  
 │   │   │   ├── prompt.txt           # Prompt templates  
-│   │   ├── app.py  
-│   │   ├── config.py  
-│   │   ├── requirements.txt  
-├── .gitignore  
-├── LICENSE  
-├── README.md  
+│   │   │   ├── 📂 DataFrames        # Folder to hold in-process CSV files  
+│   │   │   ├── 📂 Emails            # Folder to store emails for processing  
+│   │   │   ├── 📂 Processing        # Folder for execution process  
+│   │   │   ├── 📂 util              # Utility scripts  
+│   │   │   │   ├── detectDuplicate.py      # Detect duplicates  
+│   │   │   │   ├── extractTextFromAttachment.py  # Extract text from email attachments  
+│   │   │   │   ├── genAIProcessing.py         # General AI processing logic  
+│   │   │   │   ├── processEmails.py           # Process emails  
+│   │   │   │   ├── workspaceSetup.py          # Workspace setup utilities  
+│   │   ├── 📂 static                # Static files (e.g., images, CSS, JS)  
+│   │   │   ├── 📂 css               # CSS folder  
+│   │   │   │   ├── styles.css       # Stylesheet for the project  
+│   │   ├── 📂 templates             # Template files (e.g., HTML)  
+│   │   │   ├── index.html           # Main HTML file  
+│   │   ├── app.py                  # App entry point  
+│   │   ├── config.py               # Configuration settings  
+│   │   ├── requirements.txt        # Python dependencies  
+├── .gitignore                     # Git ignore file  
+├── LICENSE                         # Project license  
+├── README.md                       # Project documentation  
+
 ```
 
 ---
