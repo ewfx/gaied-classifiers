@@ -187,6 +187,13 @@ To **automate and optimize** this workflow, we developed an **AI-powered system*
 
 ---
 
+## 🏗️ Tech Stack  
+- **Frontend:** Flask (Used for building the UI and handling API requests to interact with the backend)  
+- **Backend:** Python (Flask for developing the backend logic and integrating the Google Gemini model for email classification and summarization)  
+- **AI Model:** Google Gemini (Generative AI model for classifying emails, summarizing content, and extracting key insights)  
+- **OCR:** Tesseract (For Optical Character Recognition to extract text from scanned PDFs and images), PDFPlumber (For reading and extracting structured text from PDFs)  
+---
+
 ## 👥 Team
 
 - **Varun Bansal** (Captain) - [GitHub](https://github.com/VarunBansal126) | [LinkedIn](https://www.linkedin.com/in/varun-bansal-58345a12b/)  
