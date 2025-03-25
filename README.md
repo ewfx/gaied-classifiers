@@ -24,7 +24,7 @@ This solution automates tedious email processing tasks, reduces manual effort, a
 
 ## 🎥 Demo
 
-📹 [Video Demo](#) (if available)  
+📹 [Video Demo](artifacts/demo/Demo_With_Text.mp4) (if available)  
 🖼️ Screenshots:
 
 ![Landing Page](artifacts/screenshots/LandingPage.PNG)  
