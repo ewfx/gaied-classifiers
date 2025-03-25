@@ -24,12 +24,9 @@ This solution automates tedious email processing tasks, reduces manual effort, a
 
 ## 🎥 Demo
 
-📹 [Video Demo](artifacts/demo/Demo_With_Text.mp4) 
+📹 [Video Demo](https://github.com/ewfx/gaied-classifiers/tree/main/artifacts/demo/Demo_With_Text.mp4) 
 
-<video controls width="600">
-  <source src="https://github.com/ewfx/gaied-classifiers/tree/main/artifacts/demo/Demo_With_Text.mp4" type="video/mp4">
-  
-</video>
+
 
 🖼️ Screenshots:
 
