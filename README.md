@@ -204,8 +204,8 @@ To **automate and optimize** this workflow, we developed an **AI-powered system*
 ---
 
 ## Design 
-<img src="./artifacts/archArch.jpg" width="300" />
 
+![Data Processing Flow](artifacts\archArch.jpg)
 
 ## 👥 Team
 
