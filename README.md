@@ -34,11 +34,11 @@ You can watch the demo video here:
 
 You can download the prompt text from here  here:
 
-[Download Text File](code/src/app/prompt.txt)
+[See GENAI Prompt](code/src/app/prompt.txt)
 
 And All the Request Type and Sub Request Types configurable here:
 
-[Download Excel File](code/src/app/categories.xlsx)
+[Request Types and Request SubTypes List](code/src/app/categories.xlsx)
 
 
 
