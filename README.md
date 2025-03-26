@@ -32,6 +32,15 @@ You can watch the demo video here:
 
 [Watch Demo Video](artifacts/demo/Demo_With_Text.mp4)
 
+You can download the prompt text from here  here:
+
+[Download Text File](code/src/app/prompt.txt)
+
+And All the Request Type and Sub Request Types configurable here:
+
+[Download Excel File](code/src/app/categories.xlsx)
+
+
 
 
 
