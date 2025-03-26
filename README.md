@@ -220,6 +220,6 @@ To **automate and optimize** this workflow, we developed an **AI-powered system*
 
 - **Varun Bansal** (Captain) - [GitHub](https://github.com/VarunBansal126) | [LinkedIn](https://www.linkedin.com/in/varun-bansal-58345a12b/)  
 - **Dipak Nayak**  
-- **Kazhian Muthusami**  
-- **Swarnlata Singh**  
-- **Manish Pandey**  
+- **Kazhian Muthusami** - [GitHub](https://github.com/kazhian) 
+- **Swarnlata Singh**  - [GitHub](https://github.com/swarnlata) 
+- **Manish Pandey**    - [GitHub](https://github.com/manish-wells) 
